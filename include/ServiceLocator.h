@@ -15,7 +15,7 @@ public:
     }
 
     template <typename T>
-    std::shared_ptr<T> GetService(const std::string &serviceName) {
+    std::shared_ptr<T> GetService(const std::string &serviceName) const {
         if (!ExistsService(serviceName)) {
             return std::shared_ptr<T>();
         }
